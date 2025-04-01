@@ -12,6 +12,18 @@ class Program
         if (DateTime.TryParseExact(input, "dd/MM/yyyy",
                 CultureInfo.InvariantCulture, DateTimeStyles.None, out var birthDate))
         {
+            if (birthDate > DateTime.Today)
+            {
+                Console.WriteLine("Data inválida, a data de nascimento não pode ser no futuro");
+                return;
+            }
+
+            if (birthDate == DateTime.Today)
+            {
+                Console.WriteLine("Feliz aniversário! seu aniversário é hoje");
+                return;
+            }
+
             var daysRemaining = DaysUntilNextBirthday(birthDate);
 
             Console.WriteLine(daysRemaining < 7

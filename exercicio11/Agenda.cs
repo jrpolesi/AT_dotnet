@@ -24,7 +24,7 @@ public class Agenda
             return;
         }
 
-        Console.WriteLine("Contatos cadastrados");
+        Console.WriteLine("Contatos cadastrados:");
         foreach (var contato in _contatos)
         {
             Console.WriteLine(

@@ -4,7 +4,7 @@ namespace exercicio9;
 
 public class Loja
 {
-    private readonly string _persistentFilePath = Path.Combine(Directory.GetCurrentDirectory(), "example.txt");
+    private readonly string _persistentFilePath = Path.Combine(Directory.GetCurrentDirectory(), "estoque.txt");
     private readonly List<Produto> _produtos;
 
     public Loja()
